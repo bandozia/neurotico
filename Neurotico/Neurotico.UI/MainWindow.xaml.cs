@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro;
 using MahApps.Metro.Controls;
 
 namespace Neurotico.UI
@@ -21,6 +22,20 @@ namespace Neurotico.UI
         public MainWindow()
         {
             InitializeComponent();
+                       
+            topSettingButtom.Click += TopSettingButtom_Click;
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            ThemeManager.ChangeTheme(Application.Current, Properties.Settings.Default.CurrentTheme);
+        }
+
+        private void TopSettingButtom_Click(object sender, RoutedEventArgs e)
+        {
+            topConfigFlyout.IsOpen = true;            
         }
     }
 }

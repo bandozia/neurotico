@@ -6,23 +6,38 @@
         xmlns:local="clr-namespace:Neurotico.UI"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:nControls="clr-namespace:Neurotico.UI.Controls"
         mc:Ignorable="d"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
-        Title="Neurotico" Height="450" Width="800">
+        Title="Neurotico" Width="1280" Height="720">
 
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
-            <Button Content="settings" />
-            <Button>
+            <Button x:Name="topSettingButtom">
                 <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconModern Width="24" Height="24" Kind="FoodApple" />
-                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="deploy cupcakes" />
+                    <iconPacks:PackIconModern Width="18" Height="18" Kind="Settings" />
                 </StackPanel>
             </Button>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
 
+    <Controls:MetroWindow.LeftWindowCommands>
+        <Controls:WindowCommands>
+            <Button>
+                <Image Source="assets/img/neurot_icon.png" Width="18" Height="18" />
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.LeftWindowCommands>
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+            <Controls:Flyout x:Name="topConfigFlyout" Header="Config" Position="Right" Width="300" Theme="Inverse">
+                <nControls:TopConfigContent />
+            </Controls:Flyout>
+        </Controls:FlyoutsControl>
+    </Controls:MetroWindow.Flyouts>
+
     <Grid>
-        
+
     </Grid>
 </Controls:MetroWindow>

@@ -22,6 +22,7 @@ namespace Neurotico.UI.Controls
         {
             InitializeComponent();
 
+            darkmodeSwitch.IsChecked = Properties.Settings.Default.CurrentTheme == "Dark.Steel";
             darkmodeSwitch.Click += DarkmodeSwitch_Click;
         }
 

@@ -9,6 +9,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="300">
     <Grid Margin="20">
-        <Controls:ToggleSwitch Header="Dark mode" x:Name="darkmodeSwitch" />        
+        <Controls:ToggleSwitch Header="Dark mode" x:Name="darkmodeSwitch" Style="{DynamicResource MahApps.Styles.ToggleSwitch.Win10}" />        
     </Grid>
 </UserControl>

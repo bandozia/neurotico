@@ -9,13 +9,13 @@
         xmlns:nControls="clr-namespace:Neurotico.UI.Controls"
         mc:Ignorable="d"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
-        Title="Neurotico" Width="1280" Height="720">
+        Title="urotico" Width="1280" Height="720">
 
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
             <Button x:Name="topSettingButtom">
                 <StackPanel Orientation="Horizontal">
-                    <iconPacks:PackIconModern Width="18" Height="18" Kind="Settings" />
+                    <iconPacks:PackIconModern Width="18" Height="18" Kind="Settings" />                    
                 </StackPanel>
             </Button>
         </Controls:WindowCommands>
@@ -36,8 +36,17 @@
             </Controls:Flyout>
         </Controls:FlyoutsControl>
     </Controls:MetroWindow.Flyouts>
-
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <Rectangle Fill="{DynamicResource MahApps.Brushes.Accent}" Height="1" VerticalAlignment="Bottom" />
+        <nControls:TopMenu x:Name="topMenu" />
+        
+
+        <Controls:TransitioningContentControl x:Name="mainContent" Grid.Row="1" />
 
     </Grid>
 </Controls:MetroWindow>

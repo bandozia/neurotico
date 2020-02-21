@@ -1,0 +1,5 @@
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\bin\Debug\Neurotico.Bridge.dll
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\bin\Debug\Neurotico.Bridge.pdb
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.csprojAssemblyReference.cache
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.dll
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.pdb

@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 namespace Neurotico.UI.Controls
 {
     public partial class TopMenu : UserControl
-    {
-        private ThicknessAnimation defaultPointerAnimation;
-
+    {        
         public TopMenu()
         {
             InitializeComponent();

@@ -9,7 +9,7 @@
         xmlns:nControls="clr-namespace:Neurotico.UI.Controls"
         mc:Ignorable="d"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
-        Title="urotico" Width="1280" Height="720">
+        Title="urotico" Width="1440" Height="850">
 
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
@@ -46,7 +46,7 @@
         <nControls:TopMenu x:Name="topMenu" />
         
 
-        <Controls:TransitioningContentControl x:Name="mainContent" Grid.Row="1" />
+        <Controls:TransitioningContentControl x:Name="mainContent" Grid.Row="1" Margin="0,15,0,0" />
 
     </Grid>
 </Controls:MetroWindow>

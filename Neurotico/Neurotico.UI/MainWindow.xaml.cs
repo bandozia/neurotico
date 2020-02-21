@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MahApps.Metro;
 using MahApps.Metro.Controls;
+using Neurotico.UI.Views.DataExplorer;
 
 namespace Neurotico.UI
 {
@@ -22,20 +23,21 @@ namespace Neurotico.UI
         public MainWindow()
         {
             InitializeComponent();
-                       
-            topSettingButtom.Click += TopSettingButtom_Click;
 
+            topSettingButtom.Click += TopSettingButtom_Click;
             Loaded += MainWindow_Loaded;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             ThemeManager.ChangeTheme(Application.Current, Properties.Settings.Default.CurrentTheme);
+
+            mainContent.Content = new DataPreviwer();
         }
 
         private void TopSettingButtom_Click(object sender, RoutedEventArgs e)
         {
-            topConfigFlyout.IsOpen = true;            
+            topConfigFlyout.IsOpen = true;
         }
     }
 }

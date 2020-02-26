@@ -61,7 +61,7 @@ namespace Neurotico.UI.Controls.DatasetSelector
         private void SwapAxisBt_Click(object sender, RoutedEventArgs e)
         {
             inverted = !inverted;
-            swapAxisBt.Content = "y";
+            swapAxisBt.Content = inverted ? "y" : "x";
 
             slider = inverted ? yRangeSlider : xRangeSlider;
 

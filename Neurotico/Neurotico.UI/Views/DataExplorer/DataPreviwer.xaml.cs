@@ -62,13 +62,21 @@ namespace Neurotico.UI.Views.DataExplorer
         }
 
         private void DatasetSelector_OnSimpleDatasetSelected(double[] x, double[] y)
-        {           
-            int c = 0;
-            foreach (var p in (ChartValues<ObservablePoint>)CurrentLine.Values)
+        {     
+            var currentValues = (ChartValues<ObservablePoint>)CurrentLine.Values;
+            if (currentValues != null && currentValues.Count == x.Length)
             {
-                p.X = x[c];
-                p.Y = y[c];
-                c++;
+                int c = 0;
+                foreach (var p in currentValues)
+                {
+                    p.X = x[c];
+                    p.Y = y[c];
+                    c++;
+                }
+            }
+            else
+            {
+                CurrentLine.Values = new ChartValues<ObservablePoint>(Enumerable.Range(0, x.Length).Select(i => new ObservablePoint(x[i], y[i])));
             }
         }
 

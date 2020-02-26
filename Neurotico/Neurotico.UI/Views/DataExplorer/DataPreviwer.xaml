@@ -19,7 +19,7 @@
         <Rectangle Fill="{DynamicResource MahApps.Brushes.Accent}" Width="1" HorizontalAlignment="Right" />
 
         <Controls:TransitioningContentControl x:Name="rightContent" />
-
+                
         <lvc:CartesianChart Grid.Column="1" Name="chart" Hoverable="False" DataTooltip="{x:Null}">
            
         </lvc:CartesianChart>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Neurotico.UI.Helpers
 {
-    public class FunctionHelper
+    public static class FunctionHelper
     {
-        private static Dictionary<string, Func<double[], double[]>> Functions = new Dictionary<string, Func<double[], double[]>>
+        private static readonly Dictionary<string, Func<double[], double[]>> Functions = new Dictionary<string, Func<double[], double[]>>
         {
             { "FTan", input => input.Select(x => Math.Tan(x)).ToArray() },
             { "FSin", input => input.Select(x => Math.Sin(x)).ToArray() },

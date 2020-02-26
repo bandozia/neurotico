@@ -141,6 +141,9 @@
     <Compile Include="Controls\DatasetSelector\FunctionsSelector.xaml.cs">
       <DependentUpon>FunctionsSelector.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ModuleStatusControl.xaml.cs">
+      <DependentUpon>ModuleStatusControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\FunctionHelper.cs" />
     <Compile Include="Views\DataExplorer\DataPreviwer.xaml.cs">
       <DependentUpon>DataPreviwer.xaml</DependentUpon>
@@ -149,6 +152,10 @@
       <DependentUpon>DatasetSelector.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\DatasetSelector\FunctionsSelector.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ModuleStatusControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,6 +224,11 @@
   <ItemGroup>
     <Resource Include="assets\img\neurot_icon.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Neurotico.Bridge\Neurotico.Bridge.csproj">
+      <Project>{94894d25-ea00-4458-b74b-8cfd6c1f801c}</Project>
+      <Name>Neurotico.Bridge</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

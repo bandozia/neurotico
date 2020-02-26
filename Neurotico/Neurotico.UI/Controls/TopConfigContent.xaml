@@ -9,6 +9,13 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="300">
     <Grid Margin="20">
-        <Controls:ToggleSwitch Header="Dark mode" x:Name="darkmodeSwitch" Style="{DynamicResource MahApps.Styles.ToggleSwitch.Win10}" />        
+        <StackPanel Orientation="Vertical">
+            <Controls:ToggleSwitch Header="Dark mode" x:Name="darkmodeSwitch" Style="{DynamicResource MahApps.Styles.ToggleSwitch.Win10}" />
+            <Rectangle Fill="{DynamicResource MahApps.Brushes.Accent}" Height="1" Margin="0,20,0,20" />
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="Avaliable modules:" FontSize="18" />
+                <local:ModuleStatusControl x:Name="sklearnStatus" Title="Scikit Learn Datasets" />
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

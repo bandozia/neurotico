@@ -13,19 +13,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Neurotico.Bridge;
 
 namespace Neurotico.UI.Controls
 {
     public partial class TopConfigContent : UserControl
     {
+        private readonly PythonBridge pythonBridge = PythonBridge.Instance;
+
         public TopConfigContent()
         {
             InitializeComponent();
 
             darkmodeSwitch.IsChecked = Properties.Settings.Default.CurrentTheme == "Dark.Steel";
             darkmodeSwitch.Click += DarkmodeSwitch_Click;
+
+            Loaded += TopConfigContent_Loaded;
         }
 
+        private async void TopConfigContent_Loaded(object sender, RoutedEventArgs e)
+        {
+            await RunModulesDiagnostics();
+        }
+
+        private async Task RunModulesDiagnostics()
+        {
+            var skleranStatusResult = await pythonBridge.PingSklearn();
+            sklearnStatus.MarkComplete(skleranStatusResult);
+        }
+                
         private void DarkmodeSwitch_Click(object sender, RoutedEventArgs e)
         {            
             if (darkmodeSwitch.IsChecked.Value)
@@ -37,7 +53,7 @@ namespace Neurotico.UI.Controls
                 Properties.Settings.Default.CurrentTheme = "Light.Steel";
             }
             ThemeManager.ChangeTheme(Application.Current, Properties.Settings.Default.CurrentTheme);            
-            Properties.Settings.Default.Save();            
+            Properties.Settings.Default.Save();
         }
     }
 }

@@ -3,3 +3,6 @@ E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\bin\Debug\Neurotico.Bridge.pd
 E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.csprojAssemblyReference.cache
 E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.dll
 E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.pdb
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\bin\Debug\Newtonsoft.Json.dll
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\bin\Debug\Newtonsoft.Json.xml
+E:\Andozianos\neurotico\Neurotico\Neurotico.Bridge\obj\Debug\Neurotico.Bridge.csproj.CopyComplete

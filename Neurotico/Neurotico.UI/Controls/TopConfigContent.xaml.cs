@@ -27,10 +27,11 @@ namespace Neurotico.UI.Controls
 
             darkmodeSwitch.IsChecked = Properties.Settings.Default.CurrentTheme == "Dark.Steel";
             darkmodeSwitch.Click += DarkmodeSwitch_Click;
+            configureEnviromentBt.Click += ConfigureEnviromentBt_Click;
 
             Loaded += TopConfigContent_Loaded;
         }
-
+              
         private async void TopConfigContent_Loaded(object sender, RoutedEventArgs e)
         {
             await RunModulesDiagnostics();
@@ -54,6 +55,11 @@ namespace Neurotico.UI.Controls
             }
             ThemeManager.ChangeTheme(Application.Current, Properties.Settings.Default.CurrentTheme);            
             Properties.Settings.Default.Save();
+        }
+
+        private void ConfigureEnviromentBt_Click(object sender, RoutedEventArgs e)
+        {
+            new ConfigWindow().ShowDialog();
         }
     }
 }

@@ -5,5 +5,14 @@
     <Setting Name="CurrentTheme" Type="System.String" Scope="User">
       <Value Profile="(Default)">Light.Steel</Value>
     </Setting>
+    <Setting Name="PyScriptMode" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PythonModulesLocation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">modules/python</Value>
+    </Setting>
+    <Setting Name="PythonPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">python</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

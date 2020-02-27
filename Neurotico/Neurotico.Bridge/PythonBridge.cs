@@ -26,6 +26,7 @@ namespace Neurotico.Bridge
         }
 
         public string InterpreterPath { get; set; }
+        public string ScriptsPath { get; set; }
         private readonly ProcessStartInfo StartInfo;
 
         private PythonBridge()
@@ -42,7 +43,7 @@ namespace Neurotico.Bridge
         public async Task<PyCommandResult> PingSklearn()
         {
             StartInfo.FileName = InterpreterPath;
-            StartInfo.Arguments = @"E:\Andozianos\neurotico_modules\python\main.py -ping sklearn"; //TODO: configs
+            StartInfo.Arguments = $@"{ScriptsPath}\main.py -ping sklearn"; 
             PyCommandResult result = null;
             using (Process p = Process.Start(StartInfo))
             {
@@ -53,11 +54,10 @@ namespace Neurotico.Bridge
                     {
                         result = JsonConvert.DeserializeObject<PyCommandResult>(resultText);
                         Console.WriteLine(result.Success);
-                    }
+                    }                   
                     catch
                     {
-                        result = new PyCommandResult { Success = false, Reason = "unknow" };
-                        Console.WriteLine("caiu no catch");
+                        result = new PyCommandResult { Success = false, Reason = "unknow" };                        
                     }
                 }
             }

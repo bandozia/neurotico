@@ -27,7 +27,8 @@ namespace Neurotico.UI
         {
             InitializeComponent();
             
-            pythonBridge.InterpreterPath = "python";
+            pythonBridge.InterpreterPath = Properties.Settings.Default.PythonPath;
+            pythonBridge.ScriptsPath = Properties.Settings.Default.PythonModulesLocation;
 
             topSettingButtom.Click += TopSettingButtom_Click;
             Loaded += MainWindow_Loaded;
